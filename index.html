@@ -1,11 +1,693 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>COL - Business Smart Registration</title>
-</head>
-<body>
-    
+    <head>
+        <title>COL - Business Smart Registration</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+
+    <div class="container">
+        <div class="center_align">
+            <img src="images/logo.png" alt="logo" class="logo">
+            <p>Business Smart Registration</p>
+        </div>
+        <div class="border border-black">
+            <!-- Nav tabs -->
+            <div class="tab">
+                <ul class="nav nav-tabs" role="tablist">
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">PACKAGE INFO</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">COMPANY INFO</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">LAT & LONG</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">CONTACT PERSON</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">VERIFICATION</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">DOCUMENT UPLOAD</span>
+                    </li>
+                    <li class="nav-item">
+                        <span class="nav-link" data-toggle="tab">REPORT</span>
+                    </li>
+                    
+                </ul>
+            </div>
+
+            <!-- Tab panes -->
+            <div class="tab-content">
+                <div id="home" class="container tab-pane active "><br>
+                    <form id="regForm" action="nothing.html">
+                        <div class="form-body-area">
+                            <div class="form-group">
+                                <label for="plan_name">CHOOSE A PLAN</label>
+                                <select class="form-control" id="plan_name" tabindex="1" required>
+                                    <option>BUSINESS SMART ULTRA 10 Mbps</option>
+                                    <option>BUSINESS SMART ULTRA 10 Mbps</option>
+                                    <option>BUSINESS SMART ULTRA 10 Mbps</option>
+                                    <option>BUSINESS SMART ULTRA 10 Mbps</option>
+                                    <option>BUSINESS SMART ULTRA 10 Mbps</option>
+                                </select>
+                            </div>
+        
+                            <div class="form-group">
+                                <label for="insall_plan">CHOOSE INSTALLATION PLAN</label>
+                                <select class="form-control" id="insall_plan" tabindex="2" required>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                </select>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pay_mode">MODE OF PAYMENT</label>
+                                        <select class="form-control" id="pay_mode" tabindex="3" required>
+                                            <option>CASH</option>
+                                            <option>CHECK</option>
+                                            <option>ONLINE PAYMENT</option>
+                                            <option>MOBILE BANKING</option>
+                                        </select>
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pay_cycle">PAYMENT CYCLE</label>
+                                        <select class="form-control" id="pay_cycle" tabindex="4" required>
+                                            <option>MONTHLY REGULAR</option>
+                                            <option>QUATERLY (YOU WILL GET 10% DISCOUNT)</option>
+                                            <option>Half Yearly (YOU WILL GET 1 Month Free)</option>
+                                            <option>YEARLY (YOU WILL GET 2 MONTHS EXTRA AS FREE)</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="wi_router">Wireless Router</label>
+                                        <select class="form-control" id="wi_router" tabindex="5" required>
+                                            <option>YES</option>
+                                            <option>NO</option>
+                                        </select>
+                                        </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="schedule_date">Schedule your Installation Date</label>
+                                        <input type="date" id="schedule_date" class="form-control" placeholder="" name="schedule_date" tabindex="6" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="total_pay">TOTAL PAYABLE</label>
+                                <textarea id="total_pay" class="form-control" rows="5" tabindex="7" required></textarea>
+                            </div>       
+                        </div>
+
+                        <div class="form-body-area">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="institute">Institution Name</label>
+                                        <input type="text" class="form-control" id="institute" placeholder="" name="institute" tabindex="8" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="reg_address">Registered Address</label>
+                                        <input type="text" class="form-control" id="reg_address" placeholder="" name="reg_address" tabindex="9" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="reg_thana">Thana</label>
+                                        <input type="text" class="form-control" id="thana" placeholder="" name="reg_thana" tabindex="10" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="reg_city">City</label>
+                                        <input type="text" class="form-control" id="reg_city" placeholder="" name="reg_city" tabindex="11" required>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="con_address">Connectivity Address</label>
+                                        <input type="text" class="form-control" id="con_address" placeholder="" name="con_address" tabindex="12" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="con_thana">Thana</label>
+                                        <input type="text" class="form-control" id="con_thana" placeholder="" name="con_thana" tabindex="13" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="con_city">City</label>
+                                        <input type="text" class="form-control" id="con_city" placeholder="" name="con_city" tabindex="14" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        <label for="owner">Owner Name</label>
+                                        <input type="text" class="form-control" id="owner" placeholder="" name="owner" tabindex="15" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="owner_mobile">Mobile Number</label>
+                                        <input type="text" class="form-control" id="owner_mobile" placeholder="" name="owner_mobile" tabindex="16" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="owner_email">E-Mail</label>
+                                        <input type="text" class="form-control" id="owner_email" placeholder="" name="owner_email" tabindex="17" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-body-area">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="latitude">LAT</label>
+                                        <input type="text" class="form-control" id="latitude" placeholder="" name="latitude" tabindex="18" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="longitude">LONG</label>
+                                        <input type="text" class="form-control" id="longitude" placeholder="" name="longitude" tabindex="19" required>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div class="form-group">
+                                <div id="map" tabindex="20"></div>
+                                    <script>
+                                        // Initialize and add the map
+                                        function initMap() {
+                                        // The location of Uluru
+                                        var uluru = {lat: -25.344, lng: 131.036};
+                                        // The map, centered at Uluru
+                                        var map = new google.maps.Map(
+                                            document.getElementById('map'), {zoom: 4, center: uluru});
+                                        // The marker, positioned at Uluru
+                                        var marker = new google.maps.Marker({position: uluru, map: map});
+                                        }
+                                    </script>
+                                    <!--Load the API from the specified URL
+                                    * The async attribute allows the browser to render the page while the API loads
+                                    * The key parameter will contain your own API key (which is not needed for this tutorial)
+                                    * The callback parameter executes the initMap() function
+                                    -->
+                                    <script async defer
+                                            src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+                                    </script>
+                            </div>
+                        </div>
+
+                        <div class="form-body-area">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="applicant"><strong>APPLICANT'S NAME</strong></label>
+                                        <select class="form-control" id="applicant_title" tabindex="21" required>
+                                            <option>Title</option>
+                                            <option>Mr.</option>
+                                            <option>Ms.</option>
+                                        </select>
+                                        </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <label for="applicant_name"><br></label>
+                                        <input type="text" class="form-control" id="applicant_name" placeholder="" name="applicant_name" tabindex="22" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="relation">RELATION WITH THE INSTITUTE</label>
+                                        <input type="text" class="form-control" id="relation" placeholder="" name="relation" tabindex="23" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label for="nationality">NATIONALITY</label>
+                                        <input type="text" class="form-control" id="nationality" placeholder="" name="nationality" tabindex="24" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="applicant_mobile">Mobile Number</label>
+                                        <input type="text" class="form-control" id="applicant_mobile" placeholder="" name="applicant_mobile" tabindex="25" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="applicant_email">E-Mail</label>
+                                        <input type="text" class="form-control" id="applicant_email" placeholder="" name="applicant_email" tabindex="26" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <label for="bill"> <strong>Billing Contact Person</strong> </label>
+                                        <input type="text" class="form-control" id="bill" placeholder="" name="bill" tabindex="27" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check"> 
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" id="bill_same" tabindex="28">
+                                        <label class="form-check-label" for="gridCheck1">
+                                          same as Above
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="bill_mobile">Mobile Number</label>
+                                        <input type="text" class="form-control" id="bill_mobile" placeholder="" name="bill_mobile" tabindex="29" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="bill_email">E-Mail</label>
+                                        <input type="text" class="form-control" id="bill_email" placeholder="" name="bill_email" tabindex="30" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <label for="admin"> <strong>Admin Contact Person</strong> </label>
+                                        <input type="text" class="form-control" id="admin" placeholder="" name="admin" tabindex="31" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check"> 
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" id="admin_same" tabindex="32">
+                                        <label class="form-check-label" for="gridCheck1">
+                                          same as Above
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="admin_mobile">Mobile Number</label>
+                                        <input type="text" class="form-control" id="admin_mobile" placeholder="" name="admin_mobile" tabindex="33" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="admin_email">E-Mail</label>
+                                        <input type="text" class="form-control" id="admin_email" placeholder="" name="admin_email" tabindex="34" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <label for="tech"> <strong>Technical Contact Person</strong> </label>
+                                        <input type="text" class="form-control" id="tech" placeholder="" name="tech" tabindex="35" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-check"> 
+                                        <br>
+                                        <input class="form-check-input" type="checkbox" id="tech_same" tabindex="36">
+                                        <label class="form-check-label" for="gridCheck1">
+                                          same as Above
+                                        </label>
+                                      </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="tech_mobile">Mobile Number</label>
+                                        <input type="text" class="form-control" id="tech_mobile" placeholder="" name="tech_mobile" tabindex="37" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="tech_email">E-Mail</label>
+                                        <input type="text" class="form-control" id="tech_email" placeholder="" name="tech_email" tabindex="38" required>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-body-area">
+                            <strong>NID Verification (Applicant or Owner)</strong>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <div class="form-group">
+                                        <label for="sel1">Name (Same as NID)</label>
+                                        <select class="form-control" id="nid_person" tabindex="39" required>
+                                            <option>Owner</option>
+                                            <option>Applicant</option>
+                                        </select>
+                                        </div>
+                                </div>
+                                <div class="col-md-9">
+                                    <div class="form-group">
+                                        <label for="nid_applicant_name"><br></label>
+                                        <input type="text" class="form-control" id="nid_applicant_name" placeholder="" name="nid_applicant_name" tabindex="40" required>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="nid">NID Number</label>
+                                        <input type="text" class="form-control" id="nid" placeholder="" name="nid" tabindex="41" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label for="dob">Date of Birth</label>
+                                        <input type="date" class="form-control" id="dob" placeholder="" name="dob" tabindex="42" required>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2">
+                                    <div class="form-group">
+                                        <br>
+                                        <button id="nid_verify" class="btn btn-secondary" tabindex="43" required>Verify</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <br><br>
+                            <strong>Mobile Number Verification (Applicant or Owner)</strong>
+                            <div class="row">
+                                <div class="col-md-7">
+                                    <div class="form-group">
+                                        <label for="mobile_verify_num">Mobile Number</label>
+                                        <input type="text" class="form-control" id="mobile_verify_num" placeholder="" name="mobile_verify_num" tabindex="44" required>
+                                    </div>
+                                </div>
+                                <div class="col-md-5">
+                                    <div class="form-group">
+                                        <label for="mobile_verify_name">Name</label>
+                                        <input type="text" class="form-control" id="mobile_verify_name" placeholder="" name="mobile_verify_name" tabindex="45" required>
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                            <div class="row">
+                                <div class="col-md-3"></div>
+                                <div class="col-md-6">
+                                    <label class="d-flex justify-content-center" for="mobile_verify_code">Verification Code</label>
+
+                                    <div class="form-group">
+                                        <div class="input-group mb-2">
+                                            <div class="input-group-prepend">
+                                              <div class="input-group-text">CODE</div>
+                                            </div>
+                                            <input type="text" class="form-control" id="mobile_verify_code" placeholder="" tabindex="46" required>
+                                            <button id="mobile_verify" class="btn btn-secondary" tabindex="47">Verify</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-3"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-body-area">
+                            <br>
+                            <br>
+                            <br>
+                           <div class="row">
+                               <div class="col-md-2"></div>
+                               <div class="col-md-8">
+                                    <button id="work_order" type="button" class="btn btn-outline-secondary btn-lg btn-block btn-left-txt" tabindex="48" required> Work Order</button>
+                               </div>
+                               <div class="col-md-2"></div>
+                           </div>
+                           <br>
+                           <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                 <button id="trade_licence" type="button" class="btn btn-outline-secondary btn-lg btn-block btn-left-txt" tabindex="49" required>Trade Licence</button>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                 <button id="visiting_card" type="button" class="btn btn-outline-secondary btn-lg btn-block btn-left-txt" tabindex="50" required>Applicant or Visiting Card</button>
+                            </div>
+                            <div class="col-md-2"></div>
+                        </div>
+                    </div>
+
+                        <div class="form-body-area">
+                            <table width="70%">
+                                <tr>
+                                    <td>Package Name</td>
+                                    <td>:</td>
+                                    <td id="r_plan_name"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mode of Payment</td>
+                                    <td>:</td>
+                                    <td id="r_pay_mode"></td></td>
+                                </tr>
+                                <tr>
+                                    <td>Payment Cycle</td>
+                                    <td>:</td>
+                                    <td id="r_pay_cycle"></td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Institute Name</td>
+                                    <td>:</td>
+                                    <td id="r_institute"></td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Registered Address</td>
+                                    <td>:</td>
+                                    <td id="r_reg_address"></td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Owner Name</td>
+                                    <td>:</td>
+                                    <td id="r_owner"></td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Mobile</td>
+                                    <td>:</td>
+                                    <td id="r_owner_mobile"></td></td>
+                                </tr>
+
+                                <tr>
+                                    <td>Email</td>
+                                    <td>:</td>
+                                    <td id="r_owner_email"></td></td>
+                                </tr>
+                            </table>
+
+                            <div class="form-check"> 
+                                <br>
+                                <input class="form-check-input" type="checkbox" id="agree" tabindex="51" required>
+                                <label class="form-check-label" for="gridCheck1">
+                                    <b>I agree to the <a href="nothing.html" style="text-decoration: none;" tabindex="52">Terms of Services</a></b>
+                                </label>
+                              </div>
+                        </div>
+
+                        <div class="form-button-area d-flex justify-content-center">
+
+                            <button type="reset" class="btn btn-primary" tabindex="53">Clear</button>
+                            
+                            <button type="button" id="prevBtn" class="btn btn-primary" onclick="nextPrev(-1)" tabindex="54">Previous</button>
+
+                            <button type="button" id="nextBtn" class="btn btn-primary" onclick="nextPrev(1)" tabindex="55">Submit</button>
+
+                        </div>
+                      
+
+                        <!-- Circles which indicates the steps of the form: -->
+                        <div style="text-align:center;margin-top:40px; display: none;">
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                            <span class="step"></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var currentTab = 0; // Current tab is set to be the first tab (0)
+        showTab(currentTab); // Display the current tab
+        
+        function showTab(n) {
+            // This function will display the specified tab of the form...
+            var x = document.getElementsByClassName("form-body-area");
+            x[n].style.display = "block";
+            //... and fix the Previous/Next buttons:
+            if (n == 0) {
+                document.getElementById("prevBtn").style.display = "none";
+            } else {
+                document.getElementById("prevBtn").style.display = "inline";
+            }
+            if (n == (x.length - 1)) {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            } else {
+                document.getElementById("nextBtn").innerHTML = "Submit";
+            }
+            //... and run a function that will display the correct step indicator:
+            fixStepIndicator(n)
+        }
+
+        function nextPrev(n) {
+            // This function will figure out which tab to display
+            var x = document.getElementsByClassName("form-body-area");
+            // Exit the function if any field in the current tab is invalid:
+            if (n == 1 && !validateForm()) return false;
+            // Hide the current tab:
+            x[currentTab].style.display = "none";
+            // Increase or decrease the current tab by 1:
+            currentTab = currentTab + n;
+            // if you have reached the end of the form...
+            if (currentTab >= x.length) {
+                // ... the form gets submitted:
+                document.getElementById("regForm").submit();
+                return true;
+            }
+            // Otherwise, display the correct tab:
+            showTab(currentTab);
+        }
+
+        function validateForm() {
+            // This function deals with validation of the form fields
+            var x, y, i, valid = true;
+            x = document.getElementsByClassName("form-body-area");
+            y = x[currentTab].getElementsByTagName("input");
+            // // A loop that checks every input field in the current tab:
+            for (i = 0; i < y.length; i++) {
+                // If a field is empty...
+                if (y[i].value == "") {
+                // add an "invalid" class to the field:
+                y[i].className += " invalid";
+                // and set the current valid status to false
+                valid = false;
+                }
+            }
+            // If the valid status is true, mark the step and nav-menu as finished and valid:
+            if (valid) {
+                document.getElementsByClassName("step")[currentTab].className += " finish";
+                document.getElementsByClassName("nav-link")[currentTab].className += " finish";
+            }
+            return valid; // return the valid status
+        }
+
+        function fixStepIndicator(n) {
+            // This function removes the "active" class of all steps and nav-menus...
+            var i, x = document.getElementsByClassName("step");
+            var y = document.getElementsByClassName("nav-link");
+            for (i = 0; i < x.length; i++) {
+                x[i].className = x[i].className.replace(" active", "");
+                y[i].className = y[i].className.replace("active", "");
+            }
+            //... and adds the "active" class on the current step and nav-menu:
+            x[n].className += " active";
+            y[n].className += " active";
+        }
+
+        const nextBtn = document.getElementById("nextBtn");
+        nextBtn.addEventListener("click", function(){
+            elementID("plan_name", "r_plan_name");
+            elementID("pay_mode", "r_pay_mode");
+            elementID("pay_cycle", "r_pay_cycle");
+            elementID("institute", "r_institute");
+            elementID("reg_address", "r_reg_address");
+            elementID("owner", "r_owner");
+            elementID("owner_mobile", "r_owner_mobile");
+            elementID("owner_email", "r_owner_email");
+        });
+
+        function elementID(get_id, set_id) {
+            var x = document.getElementById(get_id).value;
+            document.getElementById(set_id).innerHTML = x;
+        }
+    </script>        
+
 </body>
 </html>
